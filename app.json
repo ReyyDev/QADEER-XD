@@ -1,0 +1,43 @@
+{
+  "name": "QADEER-XD",
+  "description": "QadeerXD, The Best WhatsApp Bot",
+  "logo": "https://files.catbox.moe/zr9zli.jpg",
+  "keywords": [],
+  "repository": "https://github.com/QadeerXTech/QADEER-XD",
+  "stack": "container",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+"env": {
+  "SESSION_ID": {
+    "description": "Must begin with 'QADEER:~'.",
+    "value": "",
+    "required": true
+  }
+},  
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
