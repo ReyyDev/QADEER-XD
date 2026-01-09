@@ -211,6 +211,6 @@
   # 2. Install Dependencies  
   npm install
 
-  # 3. Add session id .env file
+  # 3. Add Session id .env folder
   # 4. Start Bot
   npm start
